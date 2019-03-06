@@ -45,6 +45,9 @@
     $BodyData = if ($null -eq $Body) { $null } else { if ($Method -ne 'Get') {$Body | ConvertTo-Json} else { $Body } }
 
     try {
+        # Force TLS1.2
+        [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
         $JSONResponse = Invoke-RestMethod -Uri $Uri -Headers $Headers -ContentType 'application/json' -Method $Method -Body $BodyData -ErrorAction Stop
     }
     catch {
