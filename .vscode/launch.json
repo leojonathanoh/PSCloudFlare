@@ -14,7 +14,7 @@
             "type": "PowerShell",
             "request": "launch",
             "name": "PowerShell Launch (current file)",
-            "program": "${file}",
+            "script": "${file}",
             "args": [],
             "cwd": "${file}"
         },
