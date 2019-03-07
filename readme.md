@@ -1,4 +1,4 @@
-# PSCloudflare Module
+# PSCloudFlare Module
 
 This is a powershell module for interacting more easily with the Cloudflare RESTful API.
 
@@ -35,7 +35,7 @@ catch {
 }
 
 if ($Connected) {
-    # Add a firewall rule that challenges the visitor with a CAPTCHA 
+    # Add a firewall rule that challenges the visitor with a CAPTCHA
     Add-CFFirewallRule -Item '192.168.1.0/24' -Notes 'Organization Block 1' -Target 'ip_range' -Mode:challenge -Verbose
 
     # List the firewall rules for the organization
